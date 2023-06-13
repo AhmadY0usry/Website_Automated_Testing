@@ -1,4 +1,5 @@
 import Pages.Home_Page;
+import Pages.Login_Page;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -10,6 +11,8 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import java.io.File;
 import java.io.IOException;
+
+import static org.testng.Assert.assertTrue;
 
 public class Test_Base {
     private WebDriver driver;
@@ -50,6 +53,15 @@ public class Test_Base {
     {
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("window.scrollBy(0,250)");
+    }
+    public void loginMethod()
+    {
+        goHome();
+        Login_Page loginPage;
+        loginPage=homePage.clickOnLogin();
+        loginPage.fill_Email_Pass_Field("ahmad11@gmail.com","123456");
+        loginPage.Click_On_Login_Button();
+        assertTrue(loginPage.checkUserStatus().getText().equalsIgnoreCase("Log out"));
     }
 
     @AfterMethod

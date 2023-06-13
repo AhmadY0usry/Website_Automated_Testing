@@ -11,7 +11,7 @@ public class Test_search_item extends Test_Base{
         //setUp("Edge");
         SoftAssert softAssert=new SoftAssert();
         homePage.searchForItem("Book");
-        searchItemPage =homePage.selectFromSuggestion();
+        searchItemPage =homePage.selectFromSuggestion(0);
         softAssert.assertTrue(searchItemPage.checkItemName("Apple MacBook Pro 13-inch"));
         softAssert.assertAll();
 

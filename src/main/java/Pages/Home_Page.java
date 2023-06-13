@@ -49,11 +49,11 @@ public class Home_Page {
     {
         driver.findElement(this.searchBar).sendKeys(items);
     }
-    public Search_Item_Page selectFromSuggestion()
+    public Search_Item_Page selectFromSuggestion(int index)
     {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         optionSuggests =driver.findElements(this.suggestion);
-        optionSuggests.get(0).click();
+        optionSuggests.get(index).click();
         return new Search_Item_Page(driver);
     }
     public Search_Result_page clickOnSearchBar()

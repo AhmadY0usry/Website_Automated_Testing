@@ -20,7 +20,7 @@ Login_Page loginPage;
             //search for the product
         goHome();
         homePage.searchForItem("Mac");
-        searchItemPage =homePage.selectFromSuggestion();
+        searchItemPage =homePage.selectFromSuggestion(0);
         assertTrue(searchItemPage.checkItemName("Apple MacBook Pro 13-inch"));
             //Email To Friend
         sendFriendPage =searchItemPage.clickOnEmailAFriend();

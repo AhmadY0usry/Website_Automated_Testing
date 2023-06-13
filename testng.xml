@@ -1,0 +1,21 @@
+<suite parallel="true" name="Suite1">
+    <parameter name="browser" value="edge"/>
+    <test name="Test Successful Register">
+        <groups>
+            <run>
+                <include name="register"/>
+                <include name="login"/>
+                <include name="MyAccount"/>
+                <include name="searchItem"/>
+                <include name="searchResult"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test_Registeration"/>
+            <class name="Test_LoginPage"/>
+            <class name="Test_myAccount"/>
+            <class name="Test_search_item"/>
+            <class name="Test_search_result"/>
+        </classes>
+    </test>
+</suite>

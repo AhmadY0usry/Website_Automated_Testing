@@ -96,4 +96,11 @@ public class Home_Page {
         return new ProductHoverMenu(driver);
     }
 
+    private By icon_wishlist=By.className("ico-wishlist");
+    public Wishlist_page clickOnWishlist()
+    {
+        driver.findElement(icon_wishlist).click();
+        return new Wishlist_page(driver);
+    }
+
 }

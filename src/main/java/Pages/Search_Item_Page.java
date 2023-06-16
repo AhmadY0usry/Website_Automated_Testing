@@ -12,7 +12,7 @@ private WebDriver driver;
 
     private By itemName= By.className("product-name");
     private By email_Friend_Btn= By.cssSelector(".button-2.email-a-friend-button");
-
+    private By add_to_wishlist_button=By.id("add-to-wishlist-button-4");
     private By AddYourReviewBtn= By.linkText("Add your review");
 
 
@@ -31,6 +31,11 @@ public Product_Reviews_Page clickOnAddYourReview_Btn()
 {
     driver.findElement(this.AddYourReviewBtn).click();
     return new Product_Reviews_Page (driver);
+}
+
+public void clickOnAddWishlistBtn()
+{
+    driver.findElement(this.add_to_wishlist_button).click();
 }
 
 private By noOfProductReview= By.xpath("//div[@class='product-review-links']/a[1]");

@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class Test_WishList extends Test_Base {
+public class Test_Wishlist extends Test_Base {
     Search_Item_Page searchItemPage;
     Wishlist_page wishlistPage;
     @Test

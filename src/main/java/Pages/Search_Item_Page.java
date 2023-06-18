@@ -14,6 +14,8 @@ private WebDriver driver;
     private By email_Friend_Btn= By.cssSelector(".button-2.email-a-friend-button");
     private By add_to_wishlist_button=By.id("add-to-wishlist-button-4");
     private By AddYourReviewBtn= By.linkText("Add your review");
+    private By AddToCompareList = By.cssSelector(".button-2.add-to-compare-list-button");
+    private By product_Comparison= By.partialLinkText("product comparison");
 
 
 public boolean checkItemName (String ItemName)
@@ -43,6 +45,18 @@ public String No_OF_product_review()
 {
     return driver.findElement(noOfProductReview).getText();
 }
+
+public void clickOnAddToCompare()
+{
+    driver.findElement(AddToCompareList).click();
+}
+
+public Product_Compare_Page clickOnProductComparison()
+{
+    driver.findElement(this.product_Comparison).click();
+    return new Product_Compare_Page(driver);
+}
+
 
 
 }

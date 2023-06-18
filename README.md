@@ -5,3 +5,6 @@ It's a Marketplace Website,
 
 Testing each page and its functionality following the page object design pattern model.
 
+still on progress
+
+

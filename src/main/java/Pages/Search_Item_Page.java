@@ -17,7 +17,7 @@ private WebDriver driver;
     private By AddToCompareList = By.cssSelector(".button-2.add-to-compare-list-button");
     private By product_Comparison= By.partialLinkText("product comparison");
     private By Add_to_cart_button= By.id("add-to-cart-button-4");
-
+    private By ShoppingCartBtn=By.className("ico-cart");
 
 public boolean checkItemName (String ItemName)
 {
@@ -58,10 +58,15 @@ public Product_Compare_Page clickOnProductComparison()
     return new Product_Compare_Page(driver);
 }
 
-public ShoppingCart_Page clickOnAddToCart()
+public void clickOnAddToCart()
 {
     driver.findElement(this.Add_to_cart_button).click();
-    return ShoppingCart_Page(driver);
+}
+
+public ShoppingCart_Page clickOnShoppingCart()
+{
+    driver.findElement(this.ShoppingCartBtn).click();
+    return new ShoppingCart_Page(driver);
 }
 
 

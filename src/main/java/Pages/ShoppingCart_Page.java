@@ -12,8 +12,10 @@ public class ShoppingCart_Page {
     private By update_Cart=By.id("updatecart");
     private By orderTotal=By.xpath("//tr[@class=\"order-total\"]//strong");
     private By noData=By.className("no-data");
-
+    private By termsOfServiceCheckBox= By.id("termsofservice");
     private By qty_Input=By.className("qty-input");
+
+    private By checkoutBtn=By.id("checkout");
 
     public ShoppingCart_Page(WebDriver driver) {
         this.driver = driver;
@@ -47,5 +49,14 @@ public class ShoppingCart_Page {
     public void Qty_Input(String Qty) {
         driver.findElement(qty_Input).clear();
         driver.findElement(qty_Input).sendKeys(Qty);
+    }
+
+    public void TermsOfServiceCheckBox_On() {
+        driver.findElement(this.termsOfServiceCheckBox).click();
+    }
+    public Checkout_as_a_guest_or_register_Page clickOnCheckoutBtn()
+    {
+        driver.findElement(this.checkoutBtn).click();
+        return new Checkout_as_a_guest_or_register_Page(driver);
     }
 }

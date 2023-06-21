@@ -16,7 +16,7 @@ private WebDriver driver;
     private By AddYourReviewBtn= By.linkText("Add your review");
     private By AddToCompareList = By.cssSelector(".button-2.add-to-compare-list-button");
     private By product_Comparison= By.partialLinkText("product comparison");
-    private By Add_to_cart_button= By.id("add-to-cart-button-4");
+    private By Add_to_cart_button= By.cssSelector(".button-1.add-to-cart-button");
     private By ShoppingCartBtn=By.className("ico-cart");
 
 public boolean checkItemName (String ItemName)

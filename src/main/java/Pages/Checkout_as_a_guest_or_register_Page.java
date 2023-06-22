@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class Checkout_as_a_guest_or_register_Page {
 
-    WebDriver driver;
+    public WebDriver driver;
 
     public Checkout_as_a_guest_or_register_Page(WebDriver driver) {
         this.driver = driver;

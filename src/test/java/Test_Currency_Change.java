@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertNotEquals;
 
 public class Test_Currency_Change extends Test_Base{
     @Test

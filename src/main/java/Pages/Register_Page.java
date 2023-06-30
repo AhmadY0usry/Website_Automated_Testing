@@ -22,11 +22,11 @@ public class Register_Page {
     private By Success_MSG = By.className("result");
     private By Login = By.linkText("Log in");
 
-    public void fill_Register_Form(String Fname, String Lname, String Email, String pass) {
+    public void fill_Register_Form(String firstname, String lastName, String email, String pass) {
         driver.findElement(this.select_male).click();
-        driver.findElement(firstName).sendKeys(Fname);
-        driver.findElement(lastName).sendKeys(Lname);
-        driver.findElement(this.Email).sendKeys(Email);
+        driver.findElement(firstName).sendKeys(firstname);
+        driver.findElement(this.lastName).sendKeys(lastName);
+        driver.findElement(this.Email).sendKeys(email);
         driver.findElement(this.Password).sendKeys(pass);
         driver.findElement(this.ConfirmPassword).sendKeys(pass);
     }
